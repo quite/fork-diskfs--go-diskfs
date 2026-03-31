@@ -132,7 +132,7 @@ func (e *ElToritoEntry) entryBytes() []byte {
 			blocks++
 		}
 	}
-	fmt.Fprintf(os.Stderr, "entryBytes LoadSize: %d blocks(Ldsiz): %d\n", e.LoadSize, blocks)
+	fmt.Fprintf(os.Stderr, "entryBytes BootFile:%s LoadSize:%d blocks(Ldsiz):%d\n", e.BootFile, e.LoadSize, blocks)
 	b := make([]byte, 0x20)
 	b[0] = 0x88
 	b[1] = byte(e.Emulation)

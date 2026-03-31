@@ -595,7 +595,7 @@ func (fsm *FileSystem) Finalize(options FinalizeOptions) error {
 			}
 			// save the child so we can add location late
 			e.size = uint16(child.size)
-			fmt.Fprintf(os.Stderr, "Finalize eltorito child.size: %d e.size: %d\n", child.size, e.size)
+			fmt.Fprintf(os.Stderr, "Finalize eltorito child.size:%d e.size:%d\n", child.size, e.size)
 			child.elToritoEntry = e
 		}
 	}
